@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+    <startup> 
+        <supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.6.1" />
+    </startup>
+    <appSettings>
+        <add key="monitorIp" value="127.0.0.1"/>
+        <add key="monitorPort" value="6250"/>
+        <add key="monitorChannel" value="1"/>
+        <add key="monitorLayer" value="10"/>
+    </appSettings>
+</configuration>
