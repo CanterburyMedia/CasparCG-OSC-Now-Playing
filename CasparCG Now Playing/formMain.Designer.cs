@@ -40,7 +40,7 @@
             this.labelTimeRemaining = new System.Windows.Forms.Label();
             this.labelTimePlayed = new System.Windows.Forms.Label();
             this.labelFramesRemaining = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.labelFps = new System.Windows.Forms.Label();
             this.labelFilePathValue = new System.Windows.Forms.Label();
             this.labelFpsValue = new System.Windows.Forms.Label();
             this.labelFramesPlayed = new System.Windows.Forms.Label();
@@ -122,7 +122,7 @@
             this.tableLayoutPanel.Controls.Add(this.labelTimeRemaining, 0, 6);
             this.tableLayoutPanel.Controls.Add(this.labelTimePlayed, 0, 5);
             this.tableLayoutPanel.Controls.Add(this.labelFramesRemaining, 0, 4);
-            this.tableLayoutPanel.Controls.Add(this.label1, 0, 1);
+            this.tableLayoutPanel.Controls.Add(this.labelFps, 0, 1);
             this.tableLayoutPanel.Controls.Add(this.labelFilePath, 0, 0);
             this.tableLayoutPanel.Controls.Add(this.labelFilePathValue, 1, 0);
             this.tableLayoutPanel.Controls.Add(this.labelFpsValue, 1, 1);
@@ -203,16 +203,16 @@
             this.labelFramesRemaining.TabIndex = 11;
             this.labelFramesRemaining.Text = "Frames Remaining";
             // 
-            // label1
+            // labelFps
             // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(174, 23);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(45, 23);
-            this.label1.TabIndex = 8;
-            this.label1.Text = "FPS";
+            this.labelFps.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.labelFps.AutoSize = true;
+            this.labelFps.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelFps.Location = new System.Drawing.Point(174, 23);
+            this.labelFps.Name = "labelFps";
+            this.labelFps.Size = new System.Drawing.Size(45, 23);
+            this.labelFps.TabIndex = 8;
+            this.labelFps.Text = "FPS";
             // 
             // labelFilePathValue
             // 
@@ -331,7 +331,6 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "formMain";
             this.Text = "OSC CasparCG Now Playing";
-            this.Load += new System.EventHandler(this.windowForm_Load);
             this.tableLayoutPanel.ResumeLayout(false);
             this.tableLayoutPanel.PerformLayout();
             this.ResumeLayout(false);
@@ -347,7 +346,7 @@
         private System.Windows.Forms.Label labelFilePath;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel;
         private System.Windows.Forms.Label labelFramesRemaining;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label labelFps;
         private System.Windows.Forms.Label labelFilePathValue;
         private System.Windows.Forms.Label labelFpsValue;
         private System.Windows.Forms.Label labelFramesPlayed;
