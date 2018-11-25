@@ -11,8 +11,8 @@ namespace CasparCG_Now_Playing
 
         string layerFilePath = null;
         int layerFps = 25;
-        int layerFramesPlayed = 35;
-        int layerFramesRemaining = 25;
+        int layerFramesPlayed = 314159;
+        int layerFramesRemaining = 45;
         bool layerLoop = false;
         bool layerPaused = false;
 
@@ -20,7 +20,7 @@ namespace CasparCG_Now_Playing
         {
             InitializeComponent();
 
-            labelListenIpPort.Text  = "Monitor " + monitorIp + ":" + monitorPort.ToString();
+            labelListenIpPort.Text  = "Monitor Port: " + monitorPort.ToString();
             labelChannel.Text       = "Channel: " + monitorChannel.ToString();
             labelLayer.Text         = "Layer: " + monitorLayer.ToString();
 
@@ -32,11 +32,17 @@ namespace CasparCG_Now_Playing
             updatePaused();
         }
 
-        private string calculateTimeDisplay(int frames)
+        private string calculateTimeDisplay(int totalFrames)
         {
-            //Calculate frames to HH:MM:SS:FF
-            //For now just return frames
-            return frames.ToString();
+            //Calculate hh:mm:ss:ff from frames and fps
+            int frames = totalFrames % layerFps;
+            int framesLeftToDisplay = totalFrames / layerFps;
+
+            //Covert the remaining seconds to hh:mm:ss
+            TimeSpan time = TimeSpan.FromSeconds(framesLeftToDisplay);
+            string displayTime = time.ToString(@"hh\:mm\:ss\:") + frames.ToString("00");
+
+            return displayTime;
         }
 
         private void updateFilePath()
