@@ -5,11 +5,9 @@ namespace CasparCG_Now_Playing
 {
     public partial class formMain : Form
     {
-        string monitorIp =System.Configuration.ConfigurationManager.AppSettings.Get("monitorIp");
         string monitorPort = System.Configuration.ConfigurationManager.AppSettings.Get("monitorPort");
         string monitorChannel = System.Configuration.ConfigurationManager.AppSettings.Get("monitorChannel");
         string monitorLayer = System.Configuration.ConfigurationManager.AppSettings.Get("monitorLayer");
-
 
         string layerFilePath = null;
         int layerFps = 25;
