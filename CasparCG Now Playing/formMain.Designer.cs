@@ -50,6 +50,8 @@
             this.labelTimeRemainingValue = new System.Windows.Forms.Label();
             this.labelPausedValue = new System.Windows.Forms.Label();
             this.labelLoopValue = new System.Windows.Forms.Label();
+            this.buttonOscStartStop = new System.Windows.Forms.Button();
+            this.labelLastMsgValue = new System.Windows.Forms.Label();
             this.tableLayoutPanel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -58,7 +60,7 @@
             this.labelCuriousjamesnet.AutoSize = true;
             this.labelCuriousjamesnet.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.labelCuriousjamesnet.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.labelCuriousjamesnet.Location = new System.Drawing.Point(0, 258);
+            this.labelCuriousjamesnet.Location = new System.Drawing.Point(0, 287);
             this.labelCuriousjamesnet.Name = "labelCuriousjamesnet";
             this.labelCuriousjamesnet.Size = new System.Drawing.Size(134, 13);
             this.labelCuriousjamesnet.TabIndex = 1;
@@ -71,7 +73,7 @@
             this.labelChannel.AutoSize = true;
             this.labelChannel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.labelChannel.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelChannel.Location = new System.Drawing.Point(372, 9);
+            this.labelChannel.Location = new System.Drawing.Point(519, 9);
             this.labelChannel.Name = "labelChannel";
             this.labelChannel.Size = new System.Drawing.Size(129, 27);
             this.labelChannel.TabIndex = 2;
@@ -82,7 +84,7 @@
             this.labelLayer.AutoSize = true;
             this.labelLayer.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.labelLayer.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelLayer.Location = new System.Drawing.Point(507, 9);
+            this.labelLayer.Location = new System.Drawing.Point(654, 9);
             this.labelLayer.Name = "labelLayer";
             this.labelLayer.Size = new System.Drawing.Size(102, 27);
             this.labelLayer.TabIndex = 3;
@@ -93,7 +95,7 @@
             this.labelListenIpPort.AutoSize = true;
             this.labelListenIpPort.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.labelListenIpPort.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelListenIpPort.Location = new System.Drawing.Point(12, 9);
+            this.labelListenIpPort.Location = new System.Drawing.Point(105, 9);
             this.labelListenIpPort.Name = "labelListenIpPort";
             this.labelListenIpPort.Size = new System.Drawing.Size(297, 27);
             this.labelListenIpPort.TabIndex = 4;
@@ -315,12 +317,36 @@
             this.labelLoopValue.TabIndex = 20;
             this.labelLoopValue.Text = "Loop Enabled";
             // 
+            // buttonOscStartStop
+            // 
+            this.buttonOscStartStop.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonOscStartStop.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.buttonOscStartStop.Location = new System.Drawing.Point(12, 9);
+            this.buttonOscStartStop.Name = "buttonOscStartStop";
+            this.buttonOscStartStop.Size = new System.Drawing.Size(77, 27);
+            this.buttonOscStartStop.TabIndex = 7;
+            this.buttonOscStartStop.Text = "Start/Stop";
+            this.buttonOscStartStop.UseVisualStyleBackColor = true;
+            this.buttonOscStartStop.Click += new System.EventHandler(this.buttonOscStartStop_Click);
+            // 
+            // labelLastMsgValue
+            // 
+            this.labelLastMsgValue.AutoSize = true;
+            this.labelLastMsgValue.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelLastMsgValue.Location = new System.Drawing.Point(237, 259);
+            this.labelLastMsgValue.Name = "labelLastMsgValue";
+            this.labelLastMsgValue.Size = new System.Drawing.Size(143, 23);
+            this.labelLastMsgValue.TabIndex = 8;
+            this.labelLastMsgValue.Text = "labelLastMsgValue";
+            // 
             // formMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ClientSize = new System.Drawing.Size(768, 271);
+            this.ClientSize = new System.Drawing.Size(768, 300);
+            this.Controls.Add(this.labelLastMsgValue);
+            this.Controls.Add(this.buttonOscStartStop);
             this.Controls.Add(this.labelCuriousjamesnet);
             this.Controls.Add(this.tableLayoutPanel);
             this.Controls.Add(this.labelListenIpPort);
@@ -331,6 +357,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "formMain";
             this.Text = "OSC CasparCG Now Playing";
+            this.Load += new System.EventHandler(this.formMain_Load);
             this.tableLayoutPanel.ResumeLayout(false);
             this.tableLayoutPanel.PerformLayout();
             this.ResumeLayout(false);
@@ -360,5 +387,7 @@
         private System.Windows.Forms.Label labelTimeRemainingValue;
         private System.Windows.Forms.Label labelPausedValue;
         private System.Windows.Forms.Label labelLoopValue;
+        private System.Windows.Forms.Button buttonOscStartStop;
+        private System.Windows.Forms.Label labelLastMsgValue;
     }
 }
