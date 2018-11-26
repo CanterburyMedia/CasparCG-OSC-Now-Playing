@@ -92,7 +92,7 @@ namespace CasparCG_Now_Playing
         {
             try
             {
-                VisitLink();
+                visitLink();
             }
             catch (Exception)
             {
@@ -100,7 +100,7 @@ namespace CasparCG_Now_Playing
             }
         }
 
-        public void VisitLink()
+        public void visitLink()
         {
             // Change the color of the link text by setting LinkVisited
             // to true.
