@@ -60,7 +60,7 @@
             this.labelCuriousjamesnet.AutoSize = true;
             this.labelCuriousjamesnet.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.labelCuriousjamesnet.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.labelCuriousjamesnet.Location = new System.Drawing.Point(0, 305);
+            this.labelCuriousjamesnet.Location = new System.Drawing.Point(0, 287);
             this.labelCuriousjamesnet.Name = "labelCuriousjamesnet";
             this.labelCuriousjamesnet.Size = new System.Drawing.Size(134, 13);
             this.labelCuriousjamesnet.TabIndex = 1;
@@ -73,22 +73,22 @@
             this.labelChannel.AutoSize = true;
             this.labelChannel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.labelChannel.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelChannel.Location = new System.Drawing.Point(486, 9);
+            this.labelChannel.Location = new System.Drawing.Point(519, 9);
             this.labelChannel.Name = "labelChannel";
-            this.labelChannel.Size = new System.Drawing.Size(139, 27);
+            this.labelChannel.Size = new System.Drawing.Size(129, 27);
             this.labelChannel.TabIndex = 2;
-            this.labelChannel.Text = "Channel: ??";
+            this.labelChannel.Text = "Channel ??";
             // 
             // labelLayer
             // 
             this.labelLayer.AutoSize = true;
             this.labelLayer.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.labelLayer.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelLayer.Location = new System.Drawing.Point(642, 9);
+            this.labelLayer.Location = new System.Drawing.Point(654, 9);
             this.labelLayer.Name = "labelLayer";
-            this.labelLayer.Size = new System.Drawing.Size(112, 27);
+            this.labelLayer.Size = new System.Drawing.Size(102, 27);
             this.labelLayer.TabIndex = 3;
-            this.labelLayer.Text = "Layer: ??";
+            this.labelLayer.Text = "Layer ??";
             // 
             // labelListenIpPort
             // 
@@ -97,9 +97,9 @@
             this.labelListenIpPort.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelListenIpPort.Location = new System.Drawing.Point(105, 9);
             this.labelListenIpPort.Name = "labelListenIpPort";
-            this.labelListenIpPort.Size = new System.Drawing.Size(244, 27);
+            this.labelListenIpPort.Size = new System.Drawing.Size(297, 27);
             this.labelListenIpPort.TabIndex = 4;
-            this.labelListenIpPort.Text = "Monitoring Port: 6250";
+            this.labelListenIpPort.Text = "Monitoring 127.0.0.1:6250";
             // 
             // labelFilePath
             // 
@@ -144,10 +144,10 @@
             this.tableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26F));
-            this.tableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
+            this.tableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 23F));
             this.tableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 11F));
-            this.tableLayoutPanel.Size = new System.Drawing.Size(742, 213);
+            this.tableLayoutPanel.Size = new System.Drawing.Size(742, 184);
             this.tableLayoutPanel.TabIndex = 6;
             // 
             // labelLoop
@@ -155,7 +155,7 @@
             this.labelLoop.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.labelLoop.AutoSize = true;
             this.labelLoop.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelLoop.Location = new System.Drawing.Point(79, 189);
+            this.labelLoop.Location = new System.Drawing.Point(79, 161);
             this.labelLoop.Name = "labelLoop";
             this.labelLoop.Size = new System.Drawing.Size(140, 23);
             this.labelLoop.TabIndex = 19;
@@ -166,7 +166,7 @@
             this.labelPaused.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.labelPaused.AutoSize = true;
             this.labelPaused.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelPaused.Location = new System.Drawing.Point(142, 168);
+            this.labelPaused.Location = new System.Drawing.Point(142, 141);
             this.labelPaused.Name = "labelPaused";
             this.labelPaused.Size = new System.Drawing.Size(77, 20);
             this.labelPaused.TabIndex = 17;
@@ -177,7 +177,7 @@
             this.labelTimeRemaining.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.labelTimeRemaining.AutoSize = true;
             this.labelTimeRemaining.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTimeRemaining.Location = new System.Drawing.Point(54, 131);
+            this.labelTimeRemaining.Location = new System.Drawing.Point(54, 118);
             this.labelTimeRemaining.Name = "labelTimeRemaining";
             this.labelTimeRemaining.Size = new System.Drawing.Size(165, 23);
             this.labelTimeRemaining.TabIndex = 15;
@@ -288,11 +288,10 @@
             // 
             this.labelTimeRemainingValue.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.labelTimeRemainingValue.AutoSize = true;
-            this.labelTimeRemainingValue.Font = new System.Drawing.Font("Verdana", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTimeRemainingValue.ForeColor = System.Drawing.Color.Yellow;
-            this.labelTimeRemainingValue.Location = new System.Drawing.Point(225, 120);
+            this.labelTimeRemainingValue.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTimeRemainingValue.Location = new System.Drawing.Point(225, 118);
             this.labelTimeRemainingValue.Name = "labelTimeRemainingValue";
-            this.labelTimeRemainingValue.Size = new System.Drawing.Size(357, 45);
+            this.labelTimeRemainingValue.Size = new System.Drawing.Size(165, 23);
             this.labelTimeRemainingValue.TabIndex = 16;
             this.labelTimeRemainingValue.Text = "Time Remaining";
             // 
@@ -301,7 +300,7 @@
             this.labelPausedValue.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.labelPausedValue.AutoSize = true;
             this.labelPausedValue.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelPausedValue.Location = new System.Drawing.Point(225, 168);
+            this.labelPausedValue.Location = new System.Drawing.Point(225, 141);
             this.labelPausedValue.Name = "labelPausedValue";
             this.labelPausedValue.Size = new System.Drawing.Size(77, 20);
             this.labelPausedValue.TabIndex = 18;
@@ -312,7 +311,7 @@
             this.labelLoopValue.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.labelLoopValue.AutoSize = true;
             this.labelLoopValue.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelLoopValue.Location = new System.Drawing.Point(225, 189);
+            this.labelLoopValue.Location = new System.Drawing.Point(225, 161);
             this.labelLoopValue.Name = "labelLoopValue";
             this.labelLoopValue.Size = new System.Drawing.Size(140, 23);
             this.labelLoopValue.TabIndex = 20;
@@ -326,7 +325,7 @@
             this.buttonOscStartStop.Name = "buttonOscStartStop";
             this.buttonOscStartStop.Size = new System.Drawing.Size(77, 27);
             this.buttonOscStartStop.TabIndex = 7;
-            this.buttonOscStartStop.Text = "Start OSC";
+            this.buttonOscStartStop.Text = "Start/Stop";
             this.buttonOscStartStop.UseVisualStyleBackColor = true;
             this.buttonOscStartStop.Click += new System.EventHandler(this.buttonOscStartStop_Click);
             // 
@@ -334,7 +333,7 @@
             // 
             this.labelLastMsgValue.AutoSize = true;
             this.labelLastMsgValue.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelLastMsgValue.Location = new System.Drawing.Point(241, 273);
+            this.labelLastMsgValue.Location = new System.Drawing.Point(237, 259);
             this.labelLastMsgValue.Name = "labelLastMsgValue";
             this.labelLastMsgValue.Size = new System.Drawing.Size(143, 23);
             this.labelLastMsgValue.TabIndex = 8;
@@ -345,7 +344,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ClientSize = new System.Drawing.Size(768, 318);
+            this.ClientSize = new System.Drawing.Size(768, 300);
             this.Controls.Add(this.labelLastMsgValue);
             this.Controls.Add(this.buttonOscStartStop);
             this.Controls.Add(this.labelCuriousjamesnet);

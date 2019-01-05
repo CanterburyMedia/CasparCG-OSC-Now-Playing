@@ -56,7 +56,11 @@ namespace CasparCG_Now_Playing
                 filterOscMessage(m);
             }
         }
-
+        /// <summary>
+        /// Handle incoming individual messages from the OSC Server
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         void casparCgOscServer_MessageReceived(object sender, OscMessageReceivedEventArgs e)
         {
             filterOscMessage(e.Message);
@@ -91,6 +95,22 @@ namespace CasparCG_Now_Playing
             labelLastMsgValue.Invoke(new MethodInvoker(() => {
                 labelLastMsgValue.Text = m.Address.ToString();
             }));
+
+            //if (!checkBoxFilterMixer.Checked && address[3] == "mixer") return;
+            //if (!checkBoxFilterStage.Checked && address[3] == "stage") return;
+            //if (!checkBoxFilterOutputConsume.Checked && address[3] == "output" && address[4] == "consume_time") return;
+            //if (m.Address.ToString() != "/channel/1/stage/layer/10/file/frame") return;
+
+            //int sRemaining = (Int32.Parse(d2) - Int32.Parse(d1)) / 25;
+
+            //d3 = sRemaining.ToString();
+
+            /*
+            dataGridViewIncomingMessages.Invoke(new MethodInvoker(() => {
+                dataGridViewIncomingMessages.Rows.Insert(0, DateTime.Now.ToString("HH:mm:ss"), m.Address.ToString(), d1, d2, d3);
+            }));
+            */
+
         }
 
         private string calculateTimeDisplay(int totalFrames)
@@ -218,7 +238,7 @@ namespace CasparCG_Now_Playing
         private void formMain_Load(object sender, EventArgs e)
         {
             updateFilePath("");
-            updateFps("1");
+            updateFps("42");
             updateFramesPlayedRemaining("0","0");
             updateLoop("False");
             updatePaused("False");
