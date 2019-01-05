@@ -20,12 +20,16 @@ namespace CasparCG_Now_Playing
         {
             get { return int.Parse(System.Configuration.ConfigurationManager.AppSettings.Get("monitorLayer")); }
         }
+        public static bool oscAutoStart
+        {
+            get { return bool.Parse(System.Configuration.ConfigurationManager.AppSettings.Get("oscAutoStart")); }
+        }
 
         string layerPathRoot = "/channel/" + monitorChannel.ToString() + "/stage/layer/" + monitorLayer + "/";
 
         private OscServer casparCgOscServer = new OscServer(TransportType.Udp, IPAddress.Any, monitorPort);
 
-        string layerFilePath;
+        //string layerFilePath;
         int layerFps;
 
         public formMain()
@@ -38,6 +42,11 @@ namespace CasparCG_Now_Playing
 
             casparCgOscServer.MessageReceived += casparCgOscServer_MessageReceived;
             casparCgOscServer.BundleReceived += casparCgOscServer_BundleReceived;
+
+            if (oscAutoStart==true)
+            {
+                oscStart();
+            }
         }
 
         void casparCgOscServer_BundleReceived(object sender, OscBundleReceivedEventArgs e)
@@ -60,7 +69,7 @@ namespace CasparCG_Now_Playing
             string d3 = (m.Data.Count > 2) ? m.Data[2].ToString() : null;
 
             string addressFull = m.Address.ToString();
-            string[] addressSplit = addressFull.Split('/');
+            string[] addressSplit = addressFull.Split('/'); 
 
             if (addressFull == layerPathRoot + "file/fps")
             {
@@ -164,14 +173,24 @@ namespace CasparCG_Now_Playing
         {
             if (casparCgOscServer.IsRunning) //Stop OSC Listener
             {
-                buttonOscStartStop.Text = "Start OSC";
-                casparCgOscServer.Stop();
+                oscStart();
             }
             else //Start OSC Listener
             {
-                buttonOscStartStop.Text = "Stop OSC";
-                casparCgOscServer.Start();
+                oscStart();
             }
+        }
+
+        private void oscStart()
+        {
+            buttonOscStartStop.Text = "Stop OSC";
+            casparCgOscServer.Start();
+        }
+
+        private void oscStop()
+        {
+            buttonOscStartStop.Text = "Start OSC";
+            casparCgOscServer.Stop();
         }
 
         private void labelCuriousjamesnet_LinkClicked(object sender, System.Windows.Forms.LinkLabelLinkClickedEventArgs e)

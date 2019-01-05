@@ -7,5 +7,6 @@
         <add key="monitorPort" value="6250"/>
         <add key="monitorChannel" value="1"/>
         <add key="monitorLayer" value="10"/>
+		<add key="oscAutoStart" value="true"/>
     </appSettings>
 </configuration>

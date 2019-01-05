@@ -339,7 +339,6 @@
             this.labelLastMsgValue.Size = new System.Drawing.Size(143, 23);
             this.labelLastMsgValue.TabIndex = 8;
             this.labelLastMsgValue.Text = "labelLastMsgValue";
-            this.labelLastMsgValue.Visible = false;
             // 
             // formMain
             // 
