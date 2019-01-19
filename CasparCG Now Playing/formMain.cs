@@ -30,7 +30,7 @@ namespace CasparCG_Now_Playing
         private OscServer casparCgOscServer = new OscServer(TransportType.Udp, IPAddress.Any, monitorPort);
 
         //string layerFilePath;
-        int layerFps;
+        float layerFps;
 
         public formMain()
         {
@@ -96,8 +96,8 @@ namespace CasparCG_Now_Playing
         private string calculateTimeDisplay(int totalFrames)
         {
             //Calculate hh:mm:ss:ff from frames and fps
-            int frames = totalFrames % layerFps;
-            int framesLeftToDisplay = totalFrames / layerFps;
+            float frames = totalFrames % layerFps;
+            float framesLeftToDisplay = totalFrames / layerFps;
 
             //Covert the remaining seconds to hh:mm:ss
             TimeSpan time = TimeSpan.FromSeconds(framesLeftToDisplay);
@@ -116,7 +116,7 @@ namespace CasparCG_Now_Playing
 
         private void updateFps(string data)
         {
-            layerFps = int.Parse(data);
+            layerFps = float.Parse(data);
 
             labelFpsValue.Invoke(new MethodInvoker(() =>
             {
@@ -173,7 +173,7 @@ namespace CasparCG_Now_Playing
         {
             if (casparCgOscServer.IsRunning) //Stop OSC Listener
             {
-                oscStart();
+                oscStop();
             }
             else //Start OSC Listener
             {
