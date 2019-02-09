@@ -24,6 +24,10 @@ namespace CasparCG_Now_Playing
         {
             get { return bool.Parse(System.Configuration.ConfigurationManager.AppSettings.Get("oscAutoStart")); }
         }
+        public static bool oscDebugger
+        {
+            get { return bool.Parse(System.Configuration.ConfigurationManager.AppSettings.Get("oscDebugger")); }
+        }
 
         string layerPathRoot = "/channel/" + monitorChannel.ToString() + "/stage/layer/" + monitorLayer + "/";
 
@@ -43,6 +47,11 @@ namespace CasparCG_Now_Playing
 
             casparCgOscServer.MessageReceived += casparCgOscServer_MessageReceived;
             casparCgOscServer.BundleReceived += casparCgOscServer_BundleReceived;
+
+            if (oscDebugger==false)
+            {
+                labelLastMsgValue.Visible = false;
+            }
 
             if (oscAutoStart==true)
             {
