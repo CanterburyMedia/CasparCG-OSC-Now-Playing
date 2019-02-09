@@ -31,6 +31,7 @@ namespace CasparCG_Now_Playing
 
         //string layerFilePath;
         float layerFps;
+        public bool autoStart = bool.Parse(System.Configuration.ConfigurationManager.AppSettings.Get("oscAutoStart"));
 
         public formMain()
         {
